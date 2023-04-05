@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/{id}', function ($id) {
+    return view('pages.note', ['id' => $id]);
+});
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.formPost');
+});
+Route::get('/update/{id}', function ($id) {
+    return view('pages.updatePost', ['id' => $id]);
 });
